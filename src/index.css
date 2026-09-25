@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #101012;
+  --color-coal: #16161A;
+  --color-ash: #1E1E22;
+  --color-line: #2A2A30;
+  --color-bone: #F4F1EA;
+  --color-sand: #C9C3B6;
+  --color-mute: #8B867B;
+  --color-bronze: #C6A15B;
+  --color-bronze-deep: #A98847;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #101012;
+  color: #F4F1EA;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #C6A15B;
+  color: #101012;
+}
+
+/* thin premium scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #101012; }
+::-webkit-scrollbar-thumb { background: #2A2A30; border-radius: 8px; border: 2px solid #101012; }
+::-webkit-scrollbar-thumb:hover { background: #C6A15B; }
+
+.font-display { font-family: var(--font-sans); letter-spacing: -0.02em; }
+
+.section-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #C6A15B;
+  font-weight: 500;
+}
+
+.hairline { border-color: rgba(244, 241, 234, 0.08); }
+
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  transition: background-size 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  padding-bottom: 2px;
+}
+.link-underline:hover { background-size: 100% 1px; }
+
+.service-card {
+  transition: border-color 0.35s ease, background 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.service-card:hover {
+  border-color: rgba(198, 161, 91, 0.45);
+  background: #1A1A1E;
+  transform: translateY(-4px);
+}
+.service-card .card-index {
+  transition: color 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.service-card:hover .card-index {
+  color: #C6A15B;
+  transform: translateX(6px);
+}
+
+.ig-tile { overflow: hidden; }
+.ig-tile img { transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease; }
+.ig-tile:hover img { transform: scale(1.06); filter: brightness(1.08); }
+
+.focus-ring:focus-visible {
+  outline: 2px solid #C6A15B;
+  outline-offset: 3px;
+}
